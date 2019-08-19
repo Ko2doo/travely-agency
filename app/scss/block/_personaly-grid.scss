@@ -1,5 +1,57 @@
 .personaly-grid{
+	padding: 115px 0 115px;
+	width: 100%;
+	background-image: url('../../img/wordmap.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 
+	.section__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		&-title{
+			width: 60%;
+		}
+
+		&--headline{
+			@include font($ral, 800);
+			font-size: 80px;
+			text-transform: uppercase;
+			color: $orange;
+		}
+
+		&--subtitle{
+			@include font($ral, 400);
+			font-size: 34px;
+			text-transform: uppercase;
+			color: $dark-grey;
+		}
+
+		&--ceo{
+			width: 50%;
+			@include font($ral, 600);
+			font-size: 19px;
+			text-align: left;
+			color: $dark-grey;
+		}
+	}
+
+	.section__body{
+		margin-top: 113px;
+
+		&--grid{
+			display: grid;
+			grid-template-columns: 390px 390px 390px;
+			grid-template-rows: repeat(2, 390px);
+
+			.box{
+				display: flex;
+				position: relative;
+			}
+		}
+	}
 
 
 }

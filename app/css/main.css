@@ -520,3 +520,75 @@ a {
   width: 100%;
   background-image: url("../../img/slider/slide5.jpg");
 }
+
+.personaly-grid {
+  padding: 115px 0 115px;
+  width: 100%;
+  background-image: url("../../img/wordmap.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.personaly-grid .section__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.personaly-grid .section__header-title {
+  width: 60%;
+}
+
+.personaly-grid .section__header--headline {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 80px;
+  text-transform: uppercase;
+  color: #fd5c08;
+}
+
+.personaly-grid .section__header--subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: #3f3e41;
+}
+
+.personaly-grid .section__header--ceo {
+  width: 50%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  text-align: left;
+  color: #3f3e41;
+}
+
+.personaly-grid .section__body {
+  margin-top: 113px;
+}
+
+.personaly-grid .section__body--grid {
+  display: grid;
+  grid-template-columns: 390px 390px 390px;
+  grid-template-rows: repeat(2, 390px);
+}
+
+.personaly-grid .section__body--grid .box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
