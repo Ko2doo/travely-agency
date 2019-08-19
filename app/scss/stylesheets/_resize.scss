@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+a,
+span{
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.container{
+	max-width: 1185px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 2px;
+}

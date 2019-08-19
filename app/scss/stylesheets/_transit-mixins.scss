@@ -1,0 +1,38 @@
+$ease-1s:         0.1s ease;
+$ease-2s:         0.2s ease;
+$ease-3s:         0.3s ease;
+$ease-4s:         0.4s ease;
+
+$easeIn-1s:       0.1s ease-in;
+$easeIn-2s:       0.2s ease-in;
+$easeIn-3s:       0.3s ease-in;
+$easeIn-4s:       0.4s ease-in;
+
+$easeInOut-1s:    0.1s ease-in-out;
+$easeInOut-2s:    0.2s ease-in-out;
+$easeInOut-3s:    0.3s ease-in-out;
+$easeInOut-4s:    0.4s ease-in-out;
+
+// ease
+@mixin ease ($ease, $properties) {
+  transition: $ease;
+  @if length($properties) > 0 {
+    transition-property: $properties;
+  }
+}
+
+// easeIn
+@mixin ease-in ($easeIn, $properties) {
+  transition: $easeIn;
+  @if length($properties) > 0 {
+    transition-property: $properties;
+  }
+}
+
+// easeInOut
+@mixin ease-in-out ($easeInOut, $properties) {
+  transition: $easeInOut;
+  @if length($properties) > 0 {
+    transition-property: $properties;
+  }
+}

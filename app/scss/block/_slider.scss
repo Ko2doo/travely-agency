@@ -1,0 +1,243 @@
+.slider{
+	width: 100%;
+	.owl-carousel{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	&__owl{
+		position: relative;
+
+		// навигация
+		.owl-dots{
+			position: absolute;
+			bottom: 60px;
+
+			.owl-dot{
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				margin-right: 18px;
+				border-radius: 50%;
+				background: $white;
+				&.active{
+					background: $orange;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+
+		&--item{
+			position: relative;
+			height: 860px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top;
+			display: flex;
+			align-items: center;
+			flex-flow: column-reverse;
+		}
+
+		.slide-content{
+
+			&__bottom{
+				margin-bottom: 130px;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		.left-box{
+			width: 60%;
+
+			.headline{
+
+				&-mini,
+				&-big{
+					text-transform: uppercase;
+					color: $white;
+				}
+
+				&-mini{
+					@include font($ral, 400);
+					font-size: 40px;
+				}
+
+				&-big{
+					@include font($ral, 900);
+					font-size: 100px;
+				}
+
+				&-small{
+					@include font($ral, 500);
+					font-size: 19px;
+					color: $white;
+				}
+			}
+		}
+
+		.info__box{
+			display: flex;
+			flex-direction: column;
+
+			&-nav{
+				display: inline-flex;
+			}
+
+			&-tab{
+				position: relative;
+				background: $dark-grey;
+				@include ease-in-out($easeInOut-2s, background);
+
+				&.active{
+					background: $orange;
+					&:before{
+						content: '';
+						position: absolute;
+						bottom: -6px;
+						width: 0;
+						height: 0;
+						border-left: 36px solid transparent;
+						border-right: 36px solid transparent;
+						border-top: 6px solid $orange;
+					}
+				}
+
+				.ticket{
+					&:before{
+						content: '';
+						width: 32px;
+						height: 17px;
+						display: inline-block;
+						background: url('../../img/icons/Icon_plane-tickets1.png') no-repeat;
+					}
+				}
+
+				.hotel{
+					&:before{
+						content: '';
+						width: 25px;
+						height: 28px;
+						display: inline-block;
+						background: url('../../img/icons/Icon_hotels1.png') no-repeat;
+					}
+				}
+
+				.car{
+					&:before{
+						content: '';
+						width: 32px;
+						height: 13px;
+						display: inline-block;
+						background: url('../../img/icons/Icon_rent-a-car1.png') no-repeat;
+					}
+				}
+			}
+
+			&--icon{
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 18px 18px;
+				width: 36px;
+				height: 36px;
+				&:hover{
+					@include ease-in($easeIn-1s, background);
+					background: $light-grey;
+				}
+			}
+
+			&-content{
+				display: none;
+
+				.box__body{
+					display: inherit;
+					flex-direction: column;
+					padding: 35px 20px 30px 20px;
+					background: $white;
+				}
+
+				&.active{
+					display: flex;
+					flex-direction: column;
+				}
+
+				.headline-info{
+					@include font($ral, 400);
+					font-size: 18px;
+					text-transform: uppercase;
+				}
+
+				.euro-icon{
+
+					&:before{
+						content: '';
+						width: 21px;
+						height: 21px;
+						display: inline-block;
+						background: url('../../img/usd/euro.png') no-repeat;
+					}
+				}
+
+				.cost{
+					@include font($ral, 900);
+					font-size: 70px;
+					color: $orange;
+				}
+
+				.box__footer{
+					text-align: center;
+					padding: 22px 25px;
+					background: $dark-grey;
+					
+					.checked{
+						@include font($ral, 600);
+						font-size: 14px;
+						text-transform: uppercase;
+						color: $white;
+						@include ease-in-out($easeInOut-2s, color);
+						&:hover{
+							@include ease($ease-1s, color);
+							color: $orange;
+						}
+
+						&-icon{
+							margin-right: 8px;
+							&:before{
+								content: '';
+								width: 16px;
+								height: 12px;
+								display: inline-block;
+								background: url('../../img/checked.png') no-repeat;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
+		.slide-1{
+			max-width: 1920px;
+			width: 100%;
+			background-image: url('../../img/slider/slide1.jpg');
+		}
+
+		.slide-2{
+			max-width: 1920px;
+			width: 100%;
+			background-image: url('../../img/slider/slide2.jpg');
+		}
+
+		.slide-3{
+			max-width: 1920px;
+			width: 100%;
+			background-image: url('../../img/slider/slide5.jpg');
+		}
+	}
+
+
+}

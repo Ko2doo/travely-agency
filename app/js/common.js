@@ -11,7 +11,13 @@ $(document).ready(function(){
     $('#search.active').removeClass('active').addClass('close');
   });
   
-  
+  $(function() {
+    $('ul.info__box-nav').on('click', 'li:not(.active)', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.info__box').find('div.info__box-content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+  });
   
   
 });//end

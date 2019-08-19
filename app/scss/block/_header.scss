@@ -1,3 +1,148 @@
+// Вызов миксинов для трансишинов:
+// @include ease($ease-1s, properties);
+// @include ease($ease-2s, properties);
+// @include ease($ease-3s, properties);
+// @include ease($ease-4s, properties);
+
+// @include ease-in($easeIn-1s, properties);
+// @include ease-in($easeIn-2s, properties);
+// @include ease-in($easeIn-3s, properties);
+// @include ease-in($easeIn-4s, properties);
+
+// @include ease-in-out($easeInOut-1s, properties);
+// @include ease-in-out($easeInOut-2s, properties);
+// @include ease-in-out($easeInOut-3s, properties);
+// @include ease-in-out($easeInOut-4s, properties);
+
+// Вызов миксинов для типографии:
+// @include font($ff, $fw);
+
 .header{
 	padding: 0;
+
+	&__wrap-navmenu{
+		background: $white;
+	}
+
+	&__navmenu{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 80px;
+		background: $white;
+		
+		&--list{
+			display: inline-flex;
+		}
+
+		&--li{
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 19px 38px 19px 38px;
+			@include ease-in-out($easeInOut-2s, background);
+			background: transparent;
+			
+			&:hover{
+				@include ease($ease-2s, background);
+				background: $light-white;
+			}
+			&.active--travel{
+				position: relative;
+				z-index: 40;
+				background: $orange;
+				&::before{
+					content: '';
+					position: absolute;
+			    bottom: -15px;
+			    left: 0;
+			    right: 0;
+			    width: 0;
+			    height: 0;
+			    border-left: 63px solid transparent;
+			    border-right: 63px solid transparent;
+					border-top: 15px solid $orange;
+				}
+			}
+			&.active{
+				background: $orange;
+			}
+
+			.icon{
+				height: 22px;
+			}
+			.ticket--icon{
+				&::before{
+					content: '';
+					width: 33px;
+					height: 20px;
+					display: inline-block;
+					background: url('../../img/icons/Icon_plane-tickets.png') no-repeat;
+				}
+			}
+			.travel--icon{
+				&::before{
+					content: '';
+					width: 17px;
+					height: 17px;
+					display: inline-block;
+					background: url('../../img/icons/Icon_travel.png') no-repeat;
+				}
+			}
+			.car--icon{
+				&::before{
+					content: '';
+					width: 28px;
+					height: 10px;
+					display: inline-block;
+					background: url('../../img/icons/Icon_rent-a-car.png') no-repeat;
+				}
+			}
+			.hotel--icon{
+				&::before{
+					content: '';
+					width: 16px;
+					height: 19px;
+					display: inline-block;
+					background: url('../../img/icons/Icon_hotels.png') no-repeat;
+				}
+			}
+			.search--icon{
+				&::before{
+					content: '';
+					width: 16px;
+					height: 16px;
+					display: inline-block;
+					background: url('../../img/icons/Icon_search.png') no-repeat;
+				}
+			}
+		}
+
+		&--link{
+			@include font($ral, 700);
+			font-size: 13px;
+			text-transform: uppercase;
+			margin-top: 8px;
+			color: $dark-grey;
+		}
+
+		&--language{
+			@include font($ral, 700);
+			font-size: 13px;
+			text-transform: uppercase;
+			color: $dark-grey;
+		}
+	}
+
+	&__navmenu--li.active--travel
+	&__navmenu--link{
+		color: $white;
+	}
+
+	&__navmenu--li.active
+	&__navmenu--link{
+		color: $white;
+	}
 }

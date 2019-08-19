@@ -1,21 +1,49 @@
-@font-face{
-  font-family: "Exo2-Regular";
-  font-weight: 400;
-  src: url("../../fonts/Exo2-Regular.ttf");
-}
-@font-face{
-  font-family: "Exo2-Medium";
-  font-weight: 500;
-  src: url("../../fonts/Exo2-Medium.ttf");
-}
-@font-face{
-  font-family: "Exo2-Black";
-  font-weight: 900;
-  src: url("../../fonts/Exo2-Black.ttf");
+@import "_resize.scss";
+
+// Вызываем миксин:
+// .header{
+//   @include font($ff, $fw);
+// }
+
+// ----->
+// Использование:
+//  - Вызываем миксин: @include font();
+//  в скобках пишем значение, первая переменная с азванием шрифта(т.е. font-family)
+//  Второе значение его вес т.е. font-weight
+// <-----
+
+@mixin ff-oxygen{
+  @font-face{
+    font-family: 'Oxygen', sans-serif;
+    src: url("../../fonts/oxygen/Oxygen-Regular.ttf");
+  }
 }
 
-html,
-body{
-  @include exo2-regular;
-  font-size: 14px;
+@mixin ff-raleway{
+  @font-face{
+    font-family: 'Raleway', sans-serif;
+    src: url("../../fonts/raleway/Raleway-Regular.ttf");
+  }
+}
+
+@mixin ff-kush-script{
+  @font-face{
+    font-family: 'Kaushan Script', cursive;
+    src: url("../../fonts/kaushan_script/KaushanScript-Regular.ttf");
+  }
+}
+
+@include ff-oxygen;
+@include ff-raleway;
+@include ff-kush-script;
+
+$oxy: 'Oxygen', sans-serif;
+$ral: 'Raleway', sans-serif;
+$kaush: 'Kaushan Script', cursive;
+
+@mixin font ($ff, $fw) {
+  font-family: $ff;
+  @if length($fw) > 0 {
+    font-weight: $fw;
+  }
 }
