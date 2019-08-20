@@ -89,8 +89,13 @@
 
 			&-tab{
 				position: relative;
+				cursor: pointer;
 				background: $dark-grey;
 				@include ease-in-out($easeInOut-2s, background);
+				&:hover{
+					@include ease-in($easeIn-1s, background);
+					background: $light-grey;
+				}
 
 				&.active{
 					background: $orange;
@@ -103,6 +108,10 @@
 						border-left: 36px solid transparent;
 						border-right: 36px solid transparent;
 						border-top: 6px solid $orange;
+					}
+					&:hover{
+						@include ease-in($easeIn-1s, background);
+						background: $orange;
 					}
 				}
 
@@ -144,10 +153,6 @@
 				padding: 18px 18px;
 				width: 36px;
 				height: 36px;
-				&:hover{
-					@include ease-in($easeIn-1s, background);
-					background: $light-grey;
-				}
 			}
 
 			&-content{

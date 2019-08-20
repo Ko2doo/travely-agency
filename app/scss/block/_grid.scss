@@ -1,0 +1,171 @@
+.section__body{
+	margin-top: 113px;
+	display: flex;
+	justify-content: center;
+
+	&--grid{
+		display: grid;
+		grid-template-columns: 390px 390px 390px;
+		grid-template-rows: repeat(2, 390px);
+
+		.box{
+			display: flex;
+			position: relative;
+
+			.travel__img{
+			  object-fit: contain;
+			  -o-object-fit: contain;
+			  max-width: 100%;
+			  margin: auto;
+			  transition: opacity .75s ease-out;
+			  -webkit-transition: opacity .75s ease-out;
+			  
+			  &.load {
+			    opacity: .3;
+			    transition-delay: .2s;
+			   }
+			}
+
+			&__price{
+				position: absolute;
+				top: 38px;
+				left: 30px;
+				display: flex;
+				flex-direction: column;
+
+				&--subtitle,
+				&--cost{
+					@include font($ral, 500);
+					text-transform: uppercase;
+					color: $white;
+				}
+
+				&--subtitle{
+					font-size: 19px;
+				}
+
+				&--cost{
+					font-size: 50px;
+					font-weight: 800;
+				}
+
+				.euro-icon{
+					margin-right: 6px;
+					&::before{
+						content: '';
+						width: 21px;
+						height: 21px;
+						display: inline-block;
+						background: url('../../img/usd/euro-orange.png') no-repeat;
+					}
+				}
+			}
+
+
+			.hover__box{
+				visibility: hidden;
+				position: absolute;
+				z-index: -1;
+				width: 100%;
+				height: auto;
+				box-sizing: border-box;
+				padding: 26px 28px 42px 28px;
+				display: flex;
+				flex-direction: column;
+				background: $grid-hover;
+				@include ease($ease-1s, background);
+
+				&--big{
+					height: 100%;
+					justify-content: space-between;
+				}
+				
+				&::after{
+					content: '';
+					position: absolute;
+					left: 40px;
+					top: -10px;
+					width: 0;
+					height: 0;
+					border-left: 13px solid transparent;
+					border-right: 13px solid transparent;
+					border-bottom: 10px solid $grid-hover;
+				}
+
+				&--name,
+				&--info{
+					@include font($ral, 400);
+					text-transform: uppercase;
+				}
+
+				&--name{
+					// margin-bottom: 13px;
+					font-size: 19px;
+					color: $orange;
+				}
+
+				&--info{
+					margin-top: 13px;
+					line-height: 30px;
+					font-weight: 600;
+					font-size: 34px;
+					color: $dark-grey;
+				}
+
+				&--more_btn{
+					margin-top: 34px;
+					@include font($ral, 500);
+					font-size: 14px;
+					text-transform: uppercase;
+					color: $dark-grey;
+					@include ease-in-out($easeInOut-2s, color);
+					&:hover{
+						color: $orange;
+						@include ease-in(easeIn-1s, color);
+					}
+				}
+
+				.bullet{
+					position: relative;
+					margin-right: 15px;
+					&:before{
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 0;
+						border-left: solid 8px $orange;
+						border-bottom: solid 6px transparent;
+						border-top: solid 6px transparent;
+						transform: translate(0,-50%);
+					}
+				}
+			}
+
+			&:hover .hover__box{
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 10;
+				animation: .5s fadeIn;
+				animation-fill-mode: forwards;
+			}
+		}
+
+	}
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+		bottom: -100px;
+		animation-timing-function: ease;
+	}
+
+	100%{
+		visibility: visible;
+		opacity: 1;
+		bottom: 0;
+		animation-timing-function: ease-in;
+	}
+}

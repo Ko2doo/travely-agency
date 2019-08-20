@@ -11,6 +11,8 @@ $(document).ready(function(){
     $('#search.active').removeClass('active').addClass('close');
   });
   
+
+  // табы
   $(function() {
     $('ul.info__box-nav').on('click', 'li:not(.active)', function() {
       $(this)
@@ -18,7 +20,11 @@ $(document).ready(function(){
         .closest('div.info__box').find('div.info__box-content').removeClass('active').eq($(this).index()).addClass('active');
     });
   });
-  
+
+    // lazyload
+  // $(".lazy-1").lazyload({
+  //   effect : "fadeIn"
+  // });
   
 });//end
 
