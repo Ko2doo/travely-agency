@@ -2,3 +2,19 @@
 @import "transit-mixins.scss";
 @import "typografy.scss";
 // @import "components/_button.scss";
+
+
+.bullet{
+	position: relative;
+	margin-right: 15px;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		border-left: solid 8px $orange;
+		border-bottom: solid 6px transparent;
+		border-top: solid 6px transparent;
+		transform: translate(0,-50%);
+	}
+}

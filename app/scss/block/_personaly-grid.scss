@@ -36,8 +36,29 @@
 			color: $dark-grey;
 		}
 	}
-	
+
 	@import "_grid.scss";
+
+	.section__footer{
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 40px;
+		
+		.btn__previevall{
+			padding: 13px 28px;
+			@include font($ral, 600);
+			font-size: 14px;
+			text-transform: uppercase;
+			background: $light-grey;
+			color: $white;
+			@include ease-in-out($easeInOut-1s, color);
+			
+			&:hover{
+				@include ease-in($easeIn-2s, color);
+				color: $orange;
+			}
+		}
+	}
 
 
 }

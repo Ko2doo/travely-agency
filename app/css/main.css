@@ -47,6 +47,24 @@ a {
   src: url("../../fonts/kaushan_script/KaushanScript-Regular.ttf");
 }
 
+.bullet {
+  position: relative;
+  margin-right: 15px;
+}
+
+.bullet:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-left: solid 8px #fd5c08;
+  border-bottom: solid 6px transparent;
+  border-top: solid 6px transparent;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
 .header {
   padding: 0;
 }
@@ -761,24 +779,6 @@ a {
   transition-property: color;
 }
 
-.personaly-grid .section__body--grid .box .hover__box .bullet {
-  position: relative;
-  margin-right: 15px;
-}
-
-.personaly-grid .section__body--grid .box .hover__box .bullet:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-left: solid 8px #fd5c08;
-  border-bottom: solid 6px transparent;
-  border-top: solid 6px transparent;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
 .personaly-grid .section__body--grid .box:hover .hover__box {
   position: absolute;
   left: 0;
@@ -821,4 +821,42 @@ a {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
+}
+
+.personaly-grid .section__footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.personaly-grid .section__footer .btn__previevall {
+  padding: 13px 28px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #545357;
+  color: #fff;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+}
+
+.personaly-grid .section__footer .btn__previevall:hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  color: #fd5c08;
 }
