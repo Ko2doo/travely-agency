@@ -1107,3 +1107,103 @@ a {
   font-size: 18px;
   color: #fff;
 }
+
+.cities__tour {
+  padding: 134px 0 130px;
+  background: url("../../img/cities-tour/section-map.jpg") no-repeat;
+  background-position: bottom;
+}
+
+.cities__tour .section__header {
+  width: 80%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+
+.cities__tour .section__header::after {
+  content: '';
+  width: 506px;
+  height: 396px;
+  position: absolute;
+  right: -27%;
+  top: -12%;
+  background: url("../../img/cities-tour/nortamerica-map.png") no-repeat;
+}
+
+.cities__tour .section__header-title, .cities__tour .section__header--ceo {
+  z-index: 10;
+}
+
+.cities__tour .section__header--headline {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 100px;
+  text-transform: uppercase;
+  line-height: 88px;
+  color: #3f3e41;
+}
+
+.cities__tour .section__header--subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: #fd5c08;
+}
+
+.cities__tour .section__header--ceo {
+  width: 70%;
+  margin-top: 36px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  text-align: left;
+  color: #3f3e41;
+}
+
+.cities__tour .section__footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.cities__tour .section__footer .btn__previevall {
+  padding: 13px 28px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #545357;
+  color: #fff;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+}
+
+.cities__tour .section__footer .btn__previevall:hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  color: #fd5c08;
+}
