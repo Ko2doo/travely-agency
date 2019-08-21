@@ -65,6 +65,40 @@ a {
           transform: translate(0, -50%);
 }
 
+.next-icon {
+  position: relative;
+}
+
+.next-icon:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-left: solid 8px #fff;
+  border-bottom: solid 6px transparent;
+  border-top: solid 6px transparent;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.prev-icon {
+  position: relative;
+}
+
+.prev-icon:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-right: solid 8px #fff;
+  border-bottom: solid 6px transparent;
+  border-top: solid 6px transparent;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
 .header {
   padding: 0;
 }
@@ -1411,16 +1445,270 @@ a {
   font-weight: 400;
 }
 
+.dropdown {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+}
+
+.dropdown:hover .dropdown__content {
+  visibility: visible;
+  -webkit-animation: .5s fade;
+          animation: .5s fade;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.dropdown:hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  background: #fd5c08;
+}
+
+.dropdown:hover::before {
+  content: '';
+  z-index: 80;
+  position: absolute;
+  top: -11px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 12px solid #fd5c08;
+}
+
+.dropdown:hover .dropdown-btn {
+  color: #fff;
+}
+
+.dropdown-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #3f3e41;
+  background: transparent;
+}
+
+.dropdown--link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #3f3e41;
+}
+
+.dropdown--li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 8px 0 8px 0;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: padding, color;
+  -o-transition-property: padding, color;
+  transition-property: padding, color;
+}
+
+.dropdown--li:hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: padding, color;
+  -o-transition-property: padding, color;
+  transition-property: padding, color;
+  padding: 8px 0 8px 18px;
+}
+
+.dropdown--li:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-left: solid 8px #fd5c08;
+  border-bottom: solid 6px transparent;
+  border-top: solid 6px transparent;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.dropdown--li:hover a {
+  font-weight: bold;
+}
+
+.dropdown__content {
+  visibility: hidden;
+  position: absolute;
+  top: -212px;
+  padding: 28px 22px 35px;
+  min-width: 200px;
+  background: #fff;
+}
+
+.dropdown-box {
+  position: absolute;
+  left: -25%;
+  z-index: 40;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    top: -350px;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    top: -212px;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    top: -350px;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    top: -212px;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
 .hot__tours-slide {
   padding: 75px 0 150px;
   height: 768px;
   position: relative;
 }
 
+.hot__tours-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100%;
+  background: #ededed;
+}
+
+.hot__tours-nav .nav__list {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hot__tours-nav .nav__list-li {
+  padding: 22px 34px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+}
+
+.hot__tours-nav .nav__list-li:hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  background: #fd5c08;
+}
+
+.hot__tours-nav .nav__list-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #3f3e41;
+}
+
+.hot__tours-nav .nav__list-link:hover {
+  color: #fff;
+}
+
+.hot__tours-nav .slider__trigger {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hot__tours-nav .prev,
+.hot__tours-nav .next {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 22px;
+  width: 60px;
+  border: none;
+  background: #3f3e41;
+}
+
+.hot__tours-nav .prev:hover,
+.hot__tours-nav .next:hover {
+  background: #fd5c08;
+}
+
 .hot__tours .slide-1 {
   max-width: 1920px;
   width: 100%;
   background-image: url("../../img/taiwan-bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+
+.hot__tours .slide-2 {
+  max-width: 1920px;
+  width: 100%;
+  background-image: url("../../img/slider/slide4.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;

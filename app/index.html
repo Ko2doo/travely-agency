@@ -608,7 +608,6 @@
       <div id="owl-slider" class="hot__tours--slider owl-carousel owl-theme owl-loaded">
         <div class="owl-stage-outer">
           <div class="owl-stage">
-
             <div class="owl-item">
               <div class="hot__tours-slide slide-1">
                 <div class="container">
@@ -648,10 +647,83 @@
               </div>
             </div>
 
+            <div class="owl-item">
+              <div class="hot__tours-slide slide-2">
+                <div class="container">
 
+                  <div class="info__sticker">
+                    <h1 class="info__sticker--title">long journey`s</h1>
+
+                    <span class="info__sticker--inf">
+                      <span class="info__sticker--date">today</span>
+                      <span class="info__sticker--numb">56,045</span>
+                      <span class="info__sticker--dep">departures</span>
+                    </span>
+                  </div>
+
+                  <div class="card__info">
+                    <div class="card__info--descript">
+                      <div class="descript__content">
+                        <h2 class="descript__title">India</h2>
+                        <p class="descript__txt">
+                          it is a modern cosmopolitan metropolis with a lively and diversified face, filled with exuberance.
+                        </p>
+                        <a class="descript__more"><span class="bullet"></span>find out more</a>
+                      </div>
+                    </div>
+
+                    <div class="card__info--price">
+                      <span class="icon-aircraft"></span>
+                      <span class="tarif-inf">starting at</span>
+                      <span class="tarif-cost">
+                        <span class="tarif-euro"></span>
+                        <span class="tarif-costs">368</span>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <nav class="hot__tours-nav">
+        <div class="container">
+          <ul class="nav__list">
+            <li class="nav__list-li dropdown">
+              <a href="#/" class="dropdown-btn">last minute
+              <div class="dropdown-box">
+                <ul class="dropdown__content">
+                  <li class="dropdown--li">
+                    <a href="#/" class="dropdown--link">skining</a>
+                  </li>
+                  <li class="dropdown--li">
+                    <a href="#/" class="dropdown--link">mediterranean</a>
+                  </li>
+                  <li class="dropdown--li">
+                    <a href="#/" class="dropdown--link">europa</a>
+                  </li>
+                  <li class="dropdown--li">
+                    <a href="#/" class="dropdown--link">long journey`s</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__list-li">
+              <a href="#/" class="nav__list-link">cruises</a>
+            </li>
+            <li class="nav__list-li">
+              <a href="#/" class="nav__list-link">wellness</a>
+            </li>
+
+            <div class="slider__trigger">
+              <button class="prev"><span class="prev-icon"></span></button>
+              <button class="next"><span class="next-icon"></span></button>
+            </div>
+          </ul>
+        </div>
+      </nav>
     </section> 
   </main>
   
@@ -705,12 +777,23 @@
           },
           1000:{
               items:1,
-              nav:true,
+              nav:false,
               loop:true,
               dots:false
           }
       }
   });
+
+  var owl=$("#owl-slider");
+    owl.owlCarousel();
+    //$(".next") - находим нашу кнопку
+    $(".next").click(function(){
+      owl.trigger("next.owl.carousel");
+    });
+    $(".prev").click(function(){
+      owl.trigger("prev.owl.carousel");
+    });
+
  </script>
     <!-- script's -off -->
 </body>

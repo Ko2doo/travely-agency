@@ -1,3 +1,114 @@
+.dropdown{
+	position: relative;
+	display: inline-flex;
+	@include ease-in-out($easeInOut-3s, background, color);
+
+	&:hover &__content{
+		visibility: visible;
+		animation: .5s fade;
+		animation-fill-mode: forwards;
+	}
+	
+	&:hover{
+		@include ease-in($easeIn-2s, background, color);
+		background: $orange;
+
+		&::before{
+			content: '';
+			z-index: 80;
+			position: absolute;
+			top: -11px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 80px solid transparent;
+			border-right: 80px solid transparent;
+			border-bottom: 12px solid $orange;
+		}
+	}
+	
+	&:hover &-btn{
+		color: $white;
+	}
+
+	&-btn{
+		@include font($ral, 600);
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $dark-grey;
+		background: transparent;
+	}
+
+	&--link{
+		@include font($ral, 400);
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $dark-grey;
+	}
+
+	&--li{
+		display: flex;
+		position: relative;
+		padding: 8px 0 8px 0;
+		@include ease-in-out($easeInOut-1s, padding, color);
+
+			&:hover{
+			@include ease-in($easeIn-2s, padding, color);
+				padding: 8px 0 8px 18px;
+
+				&::before{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					border-left: solid 8px $orange;
+					border-bottom: solid 6px transparent;
+					border-top: solid 6px transparent;
+					transform: translate(0,-50%);
+				}
+			}
+
+			&:hover a{
+				font-weight: bold;
+			}
+	}
+
+	&__content{
+		visibility: hidden;
+		position: absolute;
+		top: -212px;
+		padding: 28px 22px 35px;
+		min-width: 200px;
+		background: $white;
+	}
+
+	&-box{
+		position: absolute;
+		// top: -190px;
+		left: -25%;
+		z-index: 40;
+	}
+}
+
+@keyframes fade{
+	0%{
+		opacity: 0;
+		top: -350px;
+		animation-timing-function: ease;
+	}
+
+	100%{
+		visibility: visible;
+		opacity: 1;
+		top: -212px;
+		animation-timing-function: ease-in;
+	}
+}
+
+// .dropdown:hover .dropdown__content{
+// 	visibility: visible;
+// }
+
 .hot__tours{
 	
 
@@ -11,10 +122,75 @@
 		position: relative;
 	}
 
+	&-nav{
+		display: flex;
+		align-items: center;
+		height: 60px;
+		width: 100%;
+		background: $light-white;
+
+		.nav__list{
+			display: inline-flex;
+
+			&-li{
+				padding: 22px 34px;
+				display: inline-flex;
+				@include ease-in-out($easeInOut-1s, background, color);
+
+				&:hover{
+					@include ease-in($easeIn-2s, background, color);
+					background: $orange;
+				}
+			}
+
+			&-link{
+				@include font($ral, 600);
+				font-size: 14px;
+				text-transform: uppercase;
+				color: $dark-grey;
+
+				&:hover{
+					color: $white;
+				}
+			}
+		}
+
+		.slider__trigger{
+			display: flex;
+		}
+
+		%buttons{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 22px;
+			width: 60px;
+			border: none;
+			background: $dark-grey;
+			&:hover{
+				background: $orange;
+			}
+		}
+
+		.prev,
+		.next{
+			@extend %buttons;
+		}
+	}
+
 	.slide-1{
     max-width: 1920px;
     width: 100%;
     background-image: url('../../img/taiwan-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	}
+
+	.slide-2{
+    max-width: 1920px;
+    width: 100%;
+    background-image: url('../../img/slider/slide4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

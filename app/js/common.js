@@ -21,10 +21,13 @@ $(document).ready(function(){
     });
   });
 
-    // lazyload
-  // $(".lazy-1").lazyload({
-  //   effect : "fadeIn"
-  // });
+
+  $(document).ready(function(){
+  $('a').on('click', function(e){
+    e.preventDefault();
+  });
+
+});
   
 });//end
 
