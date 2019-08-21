@@ -1,0 +1,121 @@
+.offers__card{
+	display: inline-flex;
+	position: relative;
+	width: 80%;
+	height: 210px;
+
+	&::after{
+		content: '';
+		position: absolute;
+		right: -105px;
+		top: -45px;
+		display: inline-block;
+		width: 310px;
+		height: 309px;
+		background: url('../../img/africa-avatar.png') no-repeat;
+	}
+
+	&--price{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: left;
+		width: 20%;
+		padding: 21px 21px 28px 21px;
+		background: $dark-grey;
+
+		.tarif-inf{
+			@include font($ral, 400);
+			text-transform: uppercase;
+			font-size: 19px;
+			color: $white;
+		}
+
+		.tarif-costs{
+			@include font($ral, 900);
+			text-transform: uppercase;
+			font-size: 60px;
+			color: $orange;
+		}
+
+		.tarif-euro{
+
+			&:before{
+				content: '';
+				width: 21px;
+				height: 21px;
+				display: inline-block;
+				background: url('../../img/usd/euro-white.png') no-repeat;
+			}
+		}
+	}
+
+	&--descript{
+		padding: 38px 30px 45px 30px;
+		text-align: left;
+		background: $grid-hover;
+		
+		.descript__content{
+			width: 60%;
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+
+		.descript{
+
+			&__title{
+				@include font($ral, 500);
+				font-size: 30px;
+				text-transform: uppercase;
+				color: $orange;
+			}
+
+			&__txt{
+				@include font($ral, 400);
+				font-size: 16px;
+				color: $dark-grey;
+
+				.txt-mark{
+					font-weight: 600;
+				}
+			}
+
+			&__more{
+				@include font($ral, 600);
+				font-size: 16px;
+				text-transform: uppercase;
+				color: $dark-grey;
+				@include ease-in($easeIn-2s, color);
+
+					&:hover{
+						color: $orange;
+						@include ease-in-out($easeInOut-1s, color);
+					}
+			}
+		}
+	}
+
+	.btn-viewall{
+		position: absolute;
+		bottom: -11%;
+		right: 60px;
+		display: inline-block;
+		z-index: 30;
+		padding: 14px 28px;
+		@include font($ral, 500);
+		text-transform: uppercase;
+		font-size: 14px;
+		background: $light-grey;
+		color: $white;
+		@include ease-in-out($easeInOut-2s, background, color, border);
+
+			&:hover{
+				border: 1px solid $light-grey;
+				background: $grid-hover;
+				color: $orange;
+				@include ease-in($easeIn-2s, background, color, border);
+			}
+	}
+}
