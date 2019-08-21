@@ -1023,6 +1023,133 @@ a {
   transition-property: background, color, border;
 }
 
+.card__info {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  right: -60px;
+  bottom: 150px;
+  width: 60%;
+  height: 210px;
+}
+
+.card__info--price {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: left;
+  padding: 30px 28px 30px 28px;
+  background: #3f3e41;
+}
+
+.card__info--price .tarif-inf {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 19px;
+  color: #fff;
+}
+
+.card__info--price .tarif-costs {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #fd5c08;
+}
+
+.card__info--price .tarif-euro:before {
+  content: '';
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  background: url("../../img/usd/euro-white.png") no-repeat;
+}
+
+.card__info--price .icon-aircraft {
+  margin-bottom: 40px;
+}
+
+.card__info--price .icon-aircraft:before {
+  content: '';
+  width: 32px;
+  height: 17px;
+  display: inline-block;
+  background: url("../../img/icons/Icon_plane-tickets1.png") no-repeat;
+}
+
+.card__info--descript {
+  width: 50%;
+  padding: 40px 30px 40px 30px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.87);
+}
+
+.card__info--descript .descript__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+}
+
+.card__info--descript .descript__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fd5c08;
+}
+
+.card__info--descript .descript__txt {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3f3e41;
+}
+
+.card__info--descript .descript__more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #3f3e41;
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+}
+
+.card__info--descript .descript__more:hover {
+  color: #fd5c08;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+}
+
 .offers {
   padding: 110px 0 198px;
   position: relative;
@@ -1206,4 +1333,96 @@ a {
   -o-transition-property: color;
   transition-property: color;
   color: #fd5c08;
+}
+
+.info__sticker {
+  max-width: 270px;
+  width: 100%;
+  height: 250px;
+  padding: 30px 28px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+  background: #fd5c08;
+}
+
+.info__sticker::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  border-top: 0 solid transparent;
+  border-right: 315px solid #fff;
+  border-bottom: 20px solid transparent;
+}
+
+.info__sticker--title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.info__sticker--inf {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.info__sticker .info__sticker--date, .info__sticker .info__sticker--numb, .info__sticker .info__sticker--dep {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.info__sticker--date {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.info__sticker--numb {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin: 2px 0 6px;
+}
+
+.info__sticker--dep {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.hot__tours-slide {
+  padding: 75px 0 150px;
+  height: 768px;
+  position: relative;
+}
+
+.hot__tours .slide-1 {
+  max-width: 1920px;
+  width: 100%;
+  background-image: url("../../img/taiwan-bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
 }

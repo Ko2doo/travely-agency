@@ -1,0 +1,23 @@
+.hot__tours{
+	
+
+	&--slider{
+
+	}
+
+	&-slide{
+		padding: 75px 0 150px;
+		height: 768px;
+		position: relative;
+	}
+
+	.slide-1{
+    max-width: 1920px;
+    width: 100%;
+    background-image: url('../../img/taiwan-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	}
+}
+
