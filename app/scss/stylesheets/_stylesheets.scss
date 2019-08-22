@@ -1,48 +1,4 @@
 @import "base-color.scss";
 @import "transit-mixins.scss";
 @import "typografy.scss";
-// @import "components/_button.scss";
-
-
-.bullet{
-	position: relative;
-	margin-right: 15px;
-	&:before{
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		border-left: solid 8px $orange;
-		border-bottom: solid 6px transparent;
-		border-top: solid 6px transparent;
-		transform: translate(0,-50%);
-	}
-}
-
-.next-icon{
-	position: relative;
-	&:before{
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		border-left: solid 8px $white;
-		border-bottom: solid 6px transparent;
-		border-top: solid 6px transparent;
-		transform: translate(0,-50%);
-	}
-}
-
-.prev-icon{
-	position: relative;
-	&:before{
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		border-right: solid 8px $white;
-		border-bottom: solid 6px transparent;
-		border-top: solid 6px transparent;
-		transform: translate(0, -50%);
-	}
-}
+@import "components";

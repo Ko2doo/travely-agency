@@ -79,7 +79,7 @@
 		top: -212px;
 		padding: 28px 22px 35px;
 		min-width: 200px;
-		background: $white;
+		background: $light-white;
 	}
 
 	&-box{
@@ -128,6 +128,11 @@
 		height: 60px;
 		width: 100%;
 		background: $light-white;
+
+		.container__nav-modif{
+			display: flex;
+			justify-content: space-between;
+		}
 
 		.nav__list{
 			display: inline-flex;
@@ -181,7 +186,7 @@
 	.slide-1{
     max-width: 1920px;
     width: 100%;
-    background-image: url('../../img/taiwan-bg.jpg');
+    background-image: url('../img/taiwan-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -190,7 +195,7 @@
 	.slide-2{
     max-width: 1920px;
     width: 100%;
-    background-image: url('../../img/slider/slide4.jpg');
+    background-image: url('../img/slider/slide4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

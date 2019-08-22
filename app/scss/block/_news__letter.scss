@@ -1,0 +1,78 @@
+.news__letter{
+	display: flex;
+	align-items: center;
+	height: 525px;
+	background: url('../img/last-tour.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	.newsletter{
+
+		&__content{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+
+			&--subtitle{
+				@include font($ral, 600);
+				font-size: 16px;
+				text-transform: uppercase;
+				color: $dark-grey;
+			}
+
+			&--title{
+				@include font($ral, 900);
+				font-size: 100px;
+				text-transform: uppercase;
+				line-height: 90px;
+				margin: 16px 0 12px;
+				color: $orange;
+			}
+
+			&--about{
+				@include font($ral, 400);
+				font-size: 32px;
+				text-transform: uppercase;
+				color: $dark-grey;
+			}
+
+			&--form{
+				display: inline-flex;
+				margin-top: 26px;
+
+				.mail__placeholder{
+					@include font($ral, 400);
+					font-size: 16px;
+					border: none;
+					padding: 12px 0;
+					text-align: center;
+					max-width: 230px;
+					width: 100%;
+					display: inline-flex;
+					background: rgba(62, 61, 64, 0.75);
+					color: $white;
+				}
+
+				.btn-sendmail{
+					display: inline-flex;
+					justify-content: center;
+					width: 40px;
+					height: 40px;
+					padding: 2px;
+					background: $orange;
+				}
+			}
+
+			&--informer{
+				margin-top: 26px;
+				@include font($ral, 500);
+				font-size: 14px;
+				color: $light-grey;
+			}
+		}
+
+	}
+
+}

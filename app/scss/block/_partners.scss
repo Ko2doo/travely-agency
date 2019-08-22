@@ -1,0 +1,39 @@
+.partners{
+	width: 100%;
+	padding: 40px 0;
+	background: $dark-grey;
+
+	&__nav{
+		width: 100%;
+		display: inline-flex;
+		justify-content: space-between;
+
+		&--li{
+			display: inherit;
+			align-items: center;
+			justify-content: center;
+			width: 20%;
+			height: auto;
+		}
+
+		.hotel-txt{
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+		}
+
+		.nomark{
+			@include font($ral, 400);
+			font-size: 32px;
+			text-transform: uppercase;
+			color: $white;
+		}
+
+		.mark{
+			@include font($ral, 600);
+			font-size: 32px;
+			text-transform: uppercase;
+			color: $orange;
+		}
+	}
+}

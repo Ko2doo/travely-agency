@@ -1,0 +1,44 @@
+.footer{
+	padding: 42px 0 42px;
+	background: $orange;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&--left{
+			.soc__media{
+				display: inline-flex;
+			}
+
+			.company__copywright{
+				display: block;
+				margin-top: 40px;
+				@include font($ral, 400);
+				font-size: 10px;
+				text-transform: uppercase;
+				color: $white;
+			}
+		}
+
+		&--right{
+			width: 40%;
+			text-align: right;
+		}
+	}
+
+		&__logo{
+
+		}
+
+		&__companyinfo{
+			margin-top: 23px;
+			@include font($ral, 400);
+			font-size: 10px;
+			text-transform: uppercase;
+			line-height: 14px;
+			color: $white;
+		}
+
+}
